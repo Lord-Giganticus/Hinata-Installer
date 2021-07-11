@@ -241,13 +241,13 @@ int Menu_Main(void)
 	OSScreenClearBufferEx(0, 0);
 	OSScreenClearBufferEx(1, 0);
 
-	console_print_pos(0, 0, "-------------------------------------");
-	console_print_pos(0, 1, "    Rosalina Theme Installer v1.1    ");
-	console_print_pos(0, 2, "-------------------------------------");
+	console_print_pos(0, 0, "-----------------------------");
+	console_print_pos(0, 1, "    Hinata Installer v1.0    ");
+	console_print_pos(0, 2, "-----------------------------");
 
-	console_print_pos(0, 4, "Press A to install custom theme.");
-	console_print_pos(0, 5, "Press B to restore original theme.");
-	console_print_pos(0, 6, "Press HOME to exit.");
+	console_print_pos(0, 4, "Press A to install custom safe.rpx");
+	console_print_pos(0, 5, "Press B to restore original safe.rpx");
+	console_print_pos(0, 6, "Press HOME to exit");
 
 	console_print_pos(0, 8, "Detected Region: %s", regionStrings[region]);
 
@@ -297,7 +297,7 @@ int Menu_Main(void)
 			} 
 			else
 			{
-				console_printf(1, "Error copying Men2.pack to %s", filepath);
+				console_printf(1, "Error copying safe.rpx to %s", filepath);
 				sleep(4);
 				break;
 			}
@@ -315,7 +315,7 @@ int Menu_Main(void)
 				// chmod the file
 				chmodSingle(fsaFd, filepath, FILE_MODE);
 
-				console_printf(1, "Successfully restored Men2.pack");
+				console_printf(1, "Successfully restored safe.rpx");
 			}
 
 			sleep(4);
@@ -359,4 +359,3 @@ int Menu_Main(void)
 
 	return 0;
 }
-
