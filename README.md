@@ -15,6 +15,6 @@ I am not responsible for any bricks or other damage done to your device!
 
 ## Credits
 
-GaryOderNichts - indexiine-installer
-FIX94 - IOSU Exploit and wupserver copied from wuphax  
-dimok789 - libiosuhax  
+- GaryOderNichts - indexiine-installer
+- FIX94 - IOSU Exploit and wupserver copied from wuphax  
+- dimok789 - libiosuhax  
