@@ -1,8 +1,10 @@
-# Hinata Installer.
+# Rosalina Theme Installer
 
-Replace original "safe.rpx" for custom rpx binary. 
+Install custom themes in your Wii U, replace the Men 2.pack file from the system menu.
 
-Requires FailST installed on Health and Safety Information channel.
+- Custom theme path: "sd:/wiiu/rosalina/install/Men2.pack"
+- A backup of the original file is also created in the directory: "sd:/wiiu/rosalina/install/backup/backup-Men2.rpx"
+
 
 ## Build
 
