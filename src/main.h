@@ -1,3 +1,11 @@
+// BROWSER_PATH_REGION = APP_PATH_REGION
+// INDEX_PATH = FILE_PATH
+// INDEX_BACKUP_PATH = FILE_BACKUP_PATH
+// INDEXIINE_INDEX_PATH = CUSTOM_FILE_PATH
+// INDEX_MODE = FILE_MODE
+// indexpath = filepath
+// indexiine-installer = hinata-installer
+
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
@@ -7,16 +15,16 @@
 
 #define MLC_MOUNT_PATH "/vol/storage_mlc01"
 
-#define BROWSER_PATH_EUR "dev:/sys/title/00050030/1001220a"
-#define BROWSER_PATH_USA "dev:/sys/title/00050030/1001210a"
-#define BROWSER_PATH_JPN "dev:/sys/title/00050030/1001200a"
+#define APP_PATH_EUR "dev:/sys/title/00050010/1004e200"
+#define APP_PATH_USA "dev:/sys/title/00050010/1004e100"
+#define APP_PATH_JPN "dev:/sys/title/00050010/1004e000"
 
-#define INDEX_PATH "/content/pages/index.html"
+#define FILE_PATH "/code/safe.rpx"
 
-#define INDEX_BACKUP_PATH "sd:/wiiu/apps/indexiine-installer/backup-index.html"
-#define INDEXIINE_INDEX_PATH "sd:/wiiu/apps/indexiine-installer/index.html"
+#define FILE_BACKUP_PATH "sd:/wiiu/hinata/backup/backup-safe.rpx"
+#define CUSTOM_FILE_PATH "sd:/wiiu/hinata/safe.rpx"
 
-#define INDEX_MODE 0x644
+#define FILE_MODE 0x644
 
 /* Main */
 #ifdef __cplusplus
