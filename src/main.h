@@ -21,7 +21,7 @@
 
 #define FILE_PATH "/content/Common/Package/Men2.pack"
 
-#define FILE_BACKUP_PATH "sd:/wiiu/rosalina/install/backup/backup-Men2.rpx"
+#define FILE_BACKUP_PATH "sd:/wiiu/rosalina/install/backup/backup-Men2.pack"
 #define CUSTOM_FILE_PATH "sd:/wiiu/rosalina/install/Men2.pack"
 
 #define FILE_MODE 0x644
