@@ -221,11 +221,11 @@ int Menu_Main(void)
 	}
 
 	// detect region
-	if (dirExists(BROWSER_PATH_EUR))
+	if (dirExists(APP_PATH_EUR))
 		region = EUR;
-	else if (dirExists(BROWSER_PATH_USA))
+	else if (dirExists(APP_PATH_USA))
 		region = USA;
-	else if (dirExists(BROWSER_PATH_JPN))
+	else if (dirExists(APP_PATH_JPN))
 		region = JPN;
 
 	if (region == Undetected)
@@ -241,16 +241,17 @@ int Menu_Main(void)
 	OSScreenClearBufferEx(0, 0);
 	OSScreenClearBufferEx(1, 0);
 
-	console_print_pos(0, 0, "-----------------------------------------");
-	console_print_pos(0, 1, "Indexiine Installer v2 by GaryOderNichts");
-	console_print_pos(0, 2, "Indexiine by Jonhyjp");
-	console_print_pos(0, 3, "Detected Region: %s", regionStrings[region]);
-	console_print_pos(0, 4, "-----------------------------------------");
+	console_print_pos(0, 0, "-------------------------------------");
+	console_print_pos(0, 1, "    Rosalina Theme Installer v1.1    ");
+	console_print_pos(0, 2, "-------------------------------------");
 
-	console_print_pos(0, 6, "Press A to backup and replace index.html");
-	console_print_pos(0, 7, "Press B to restore index.html");
+	console_print_pos(0, 4, "Press A to install custom theme.");
+	console_print_pos(0, 5, "Press B to restore original theme.");
+	console_print_pos(0, 6, "Press HOME to exit.");
 
-	console_print_pos(0, 9, "Press HOME to exit");
+	console_print_pos(0, 8, "Detected Region: %s", regionStrings[region]);
+
+
 
 	// Flip buffers
 	OSScreenFlipBuffersEx(0);
@@ -259,17 +260,17 @@ int Menu_Main(void)
 	int vpadError = -1;
 	VPADData vpad;
 
-	char* indexpath;
+	char* filepath;
 	switch (region)
 	{
 	case EUR:
-		indexpath = BROWSER_PATH_EUR INDEX_PATH;
+		filepath = APP_PATH_EUR FILE_PATH;
 		break;
 	case USA:
-		indexpath = BROWSER_PATH_USA INDEX_PATH;
+		filepath = APP_PATH_USA FILE_PATH;
 		break;
 	case JPN:
-		indexpath = BROWSER_PATH_JPN INDEX_PATH;
+		filepath = APP_PATH_JPN FILE_PATH;
 		break;
 	default:
 		return 0;
@@ -284,24 +285,24 @@ int Menu_Main(void)
 		if(vpadError == 0 && ((vpad.btns_d | vpad.btns_h) & VPAD_BUTTON_A))
 		{
 			// Backup the file if it exists and there is no backup
-			if (fileExists(indexpath) && !fileExists(INDEX_BACKUP_PATH))
+			if (fileExists(filepath) && !fileExists(FILE_BACKUP_PATH))
 			{
-				copyFile(indexpath, INDEX_BACKUP_PATH);
+				copyFile(filepath, FILE_BACKUP_PATH);
 			}
 			
-			if (copyFile(INDEXIINE_INDEX_PATH, indexpath))
+			if (copyFile(CUSTOM_FILE_PATH, filepath))
 			{
 				// chmod the file
-				chmodSingle(fsaFd, indexpath, INDEX_MODE);	
+				chmodSingle(fsaFd, filepath, FILE_MODE);	
 			} 
 			else
 			{
-				console_printf(1, "Error copying index.html to %s", indexpath);
+				console_printf(1, "Error copying Men2.pack to %s", filepath);
 				sleep(4);
 				break;
 			}
 			
-			console_printf(1, "Successfully installed Indexiine!");
+			console_printf(1, "Successfully installed!");
 			sleep(4);
 			break;
 		}
@@ -309,12 +310,12 @@ int Menu_Main(void)
 		// Restore
 		if(vpadError == 0 && ((vpad.btns_d | vpad.btns_h) & VPAD_BUTTON_B))
 		{
-			if (copyFile(INDEX_BACKUP_PATH, indexpath))
+			if (copyFile(FILE_BACKUP_PATH, filepath))
 			{
 				// chmod the file
-				chmodSingle(fsaFd, indexpath, INDEX_MODE);
+				chmodSingle(fsaFd, filepath, FILE_MODE);
 
-				console_printf(1, "Successfully restored index.html");
+				console_printf(1, "Successfully restored Men2.pack");
 			}
 
 			sleep(4);
