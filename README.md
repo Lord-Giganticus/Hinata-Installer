@@ -4,6 +4,9 @@ Replace original "safe.rpx" for custom rpx binary.
 
 Requires FailST installed on Health and Safety Information channel.
 
+- Original RPX path: "sd:/wiiu/hinata/backup/backup-safe.rpx"
+- Custom RPX path: "sd:/wiiu/hinata/safe.rpx"
+
 ## Build
 
 Run `make` in arm_user, arm_kernel and wupserver and copy each `*bin.h` to /payload  
