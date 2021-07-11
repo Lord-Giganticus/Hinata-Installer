@@ -3,7 +3,7 @@
 Install custom themes in your Wii U, replace the Men 2.pack file from the system menu.
 
 - Custom theme path: "sd:/wiiu/rosalina/install/Men2.pack"
-- A backup of the original file is also created in the directory: "sd:/wiiu/rosalina/install/backup/backup-Men2.rpx"
+- A backup of the original file is also created in the directory: "sd:/wiiu/rosalina/install/backup/backup-Men2.pack"
 
 
 ## Build
