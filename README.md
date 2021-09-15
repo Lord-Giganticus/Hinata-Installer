@@ -1,5 +1,7 @@
 # Rosalina Theme Installer for Men2.pack
 
+For the installer for Men1.pack go [here](https://github.com/Lord-Giganticus/Hinata-Installer/tree/Rosalina-Theme-Installer-Men)
+
 The themes on Wii U use two files, put them in the following paths:
 
 Men.pack in 'wiiu/rosalina/install/Men.pack'
