@@ -1,4 +1,4 @@
-# Rosalina Theme Installer
+# Rosalina Theme Installer for Men2.pack
 
 The themes on Wii U use two files, put them in the following paths:
 
