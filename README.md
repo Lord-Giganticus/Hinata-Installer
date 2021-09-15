@@ -12,6 +12,13 @@ Requires FailST installed on Health and Safety Information channel.
 Run `make` in arm_user, arm_kernel and wupserver and copy each `*bin.h` to /payload  
 Run `make`  
 
+## Building with Docker
+
+Run the following command in your shell of choice.
+```
+docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build /bin/bash -c make && docker cp build:/Hinata-Installer output
+```
+
 ## Disclaimer
 
 I am not responsible for any bricks or other damage done to your device!
