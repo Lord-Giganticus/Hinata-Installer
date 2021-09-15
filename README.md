@@ -21,7 +21,7 @@ Run `make`
 
 Run the following command in your shell of choice.
 ```
-docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer output && docker rm build && docker image rm builder
+docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men2.elf && docker rm build && docker image rm builder
 ```
 
 ## Disclaimer
