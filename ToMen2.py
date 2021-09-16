@@ -23,6 +23,7 @@ def main() :
         with open("main.h","w") as f:
             f.writelines(lines)
             f.close()
+            print("Setup Men2 for main.h")
 
     with open("main.c","r") as f:
         lines = f.readlines()
@@ -37,6 +38,7 @@ def main() :
         with open("main.c","w") as f:
             f.writelines(lines)
             f.close()
+            print("Setup Men2 for main.c")
 
 if __name__ == "__main__":
     exit(main())
