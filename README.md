@@ -1,6 +1,4 @@
-# Rosalina Theme Installer for Men2.pack
-
-For the installer of Men.pack go [here](https://github.com/Lord-Giganticus/Hinata-Installer/tree/Rosalina-Theme-Installer-Men)
+# Rosalina Theme Installer
 
 The themes on Wii U use two files, put them in the following paths:
 
@@ -21,9 +19,14 @@ Run `make`
 
 ## Building with Docker
 
-Run the following command in your shell of choice.
+Run the following command in your shell of choice. *This command assumes you have python 3.x installed*
+* Win Command:
 ```
-docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men2.elf && docker rm build && docker image rm builder
+docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men2.elf && docker rm build && docker image rm builder && py -3 ToMen.py && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men.elf && docker rm build && docker image rm builder && py -3 ToMen2.py
+```
+* Unix Command:
+```
+docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men2.elf && docker rm build && docker image rm builder && python3 ToMen.py && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf rosalina-theme-installer-men.elf && docker rm build && docker image rm builder && python3 ToMen2.py
 ```
 
 ## Disclaimer
