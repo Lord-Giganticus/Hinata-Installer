@@ -242,11 +242,11 @@ int Menu_Main(void)
 	OSScreenClearBufferEx(1, 0);
 
 	console_print_pos(0, 0, "-----------------------------");
-	console_print_pos(0, 1, "    Hinata Installer v1.0    ");
+	console_print_pos(0, 1, "    1stNUP Installer v1.0    ");
 	console_print_pos(0, 2, "-----------------------------");
 
-	console_print_pos(0, 4, "Press A to install custom safe.rpx");
-	console_print_pos(0, 5, "Press B to restore original safe.rpx");
+	console_print_pos(0, 4, "Press A to install custom 1stNUP.xml");
+	console_print_pos(0, 5, "Press B to restore original 1stNUP.xml");
 	console_print_pos(0, 6, "Press HOME to exit");
 
 	console_print_pos(0, 8, "Detected Region: %s", regionStrings[region]);
@@ -297,7 +297,7 @@ int Menu_Main(void)
 			} 
 			else
 			{
-				console_printf(1, "Error copying safe.rpx to %s", filepath);
+				console_printf(1, "Error copying 1stNUP.xml to %s", filepath);
 				sleep(4);
 				break;
 			}
@@ -315,7 +315,7 @@ int Menu_Main(void)
 				// chmod the file
 				chmodSingle(fsaFd, filepath, FILE_MODE);
 
-				console_printf(1, "Successfully restored safe.rpx");
+				console_printf(1, "Successfully restored 1stNUP.xml");
 			}
 
 			sleep(4);

@@ -15,14 +15,14 @@
 
 #define MLC_MOUNT_PATH "/vol/storage_mlc01"
 
-#define APP_PATH_EUR "dev:/sys/title/00050010/1004e200"
-#define APP_PATH_USA "dev:/sys/title/00050010/1004e100"
-#define APP_PATH_JPN "dev:/sys/title/00050010/1004e000"
+#define APP_PATH_EUR "dev:/sys/title/00050010/10040200/content/EuEnglish"
+#define APP_PATH_USA "dev:/sys/title/00050010/10040100/content/UsEnglish"
+#define APP_PATH_JPN "dev:/sys/title/00050010/10040000/content/JpJapanese"
 
-#define FILE_PATH "/code/safe.rpx"
+#define FILE_PATH "/Olive/1stNUP.xml"
 
-#define FILE_BACKUP_PATH "sd:/wiiu/hinata/backup/backup-safe.rpx"
-#define CUSTOM_FILE_PATH "sd:/wiiu/hinata/safe.rpx"
+#define FILE_BACKUP_PATH "sd:/wiiu/wario/backup/1stNUP.xml"
+#define CUSTOM_FILE_PATH "sd:/wiiu/wario/1stNUP.xml"
 
 #define FILE_MODE 0x644
 

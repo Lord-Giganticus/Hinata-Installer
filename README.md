@@ -1,11 +1,11 @@
-# Hinata Installer.
+# 1stNUP Installer.
 
-Replace original "safe.rpx" for custom rpx binary. 
+Replace original "1stNUP.xml" for custom icons on Wara Wara Plaza. 
 
 Requires FailST installed on Health and Safety Information channel.
 
-- Original RPX path: "sd:/wiiu/hinata/backup/backup-safe.rpx"
-- Custom RPX path: "sd:/wiiu/hinata/safe.rpx"
+- Original RPX path: "sd:/wiiu/wario/backup/1stNUP.xml"
+- Custom RPX path: "sd:/wiiu/wario/1stNUP.xml"
 
 ## Build
 
@@ -16,7 +16,7 @@ Run `make`
 
 Run the following command in your shell of choice.
 ```
-docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf indexiine-installer.elf && docker rm build && docker image rm builder
+docker pull devkitpro/devkitppc && docker build -t builder . && docker run --name build builder /bin/bash -c make && docker cp build:/Hinata-Installer/indexiine-installer.elf 1stNUP-installer.elf && docker rm build && docker image rm builder
 ```
 
 ## Disclaimer
