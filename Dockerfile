@@ -6,13 +6,15 @@ RUN git clone https://github.com/dimok789/libiosuhax.git
 
 RUN cd libiosuhax && make && make install && cd ../ && rm -r libiosuhax
 
-RUN git clone https://github.com/CafeCentralUI/Hinata-Installer.git -b Rosalina-Theme-Installer
-
-RUN cd Hinata-Installer && mkdir payload
+RUN mkdir Hinata-Installer
 
 WORKDIR /Hinata-Installer
 
+RUN mkdir payload
+
 ENV PAYLOAD=/Hinata-Installer/payload
+
+COPY . .
 
 RUN cd arm_user && make && mv arm_user* ${PAYLOAD}
 
