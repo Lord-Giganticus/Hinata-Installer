@@ -14,15 +14,29 @@ def main() :
         f.close()
 
     if lines[21][43:47] == "Men.":
-        exit(print("Already setup for Men."))   
-    
-    lines[21] = lines[21].replace("2","")
-    lines[23] = lines[23].replace("2","")
-    lines[24] = lines[24].replace("2","")
+        print("Already setup for Men on main.h")
+    else: 
+        lines[21] = lines[21].replace("2","")
+        lines[23] = lines[23].replace("2","")
+        lines[24] = lines[24].replace("2","")
 
-    with open("main.h","w") as f:
-        f.writelines(lines)
+        with open("main.h","w") as f:
+            f.writelines(lines)
+            f.close()
+
+    with open("main.c","r") as f:
+        lines = f.readlines()
         f.close()
+        
+    if lines[299][37:41] == "Men.":
+        print("Already setput for Men on main.c")
+    else:
+        lines[299] = lines[299].replace("2","")
+        lines[317] = lines[317].replace("2","")
+
+        with open("main.c","w") as f:
+            f.writelines(lines)
+            f.close()
     
     
 
